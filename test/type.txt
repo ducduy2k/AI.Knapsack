@@ -1,0 +1,13 @@
+00Uncorrelated
+01WeaklyCorrelated
+02StronglyCorrelated
+03InverseStronglyCorrelated
+04AlmostStronglyCorrelated
+05SubsetSum
+06UncorrelatedWithSimilarWeights
+07SpannerUncorrelated
+08SpannerWeaklyCorrelated
+09SpannerStronglyCorrelated
+10MultipleStronglyCorrelated
+11ProfitCeiling
+12Circle

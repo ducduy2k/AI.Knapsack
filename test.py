@@ -5,7 +5,7 @@ import signal
 import resource
 
 def signal_handler(signum, frame):
-    f = open('result.csv', 'a')
+    f = open('result.txt', 'a')
     f.write(',#NA,#NA')
     f.close()
     print('time out')
@@ -25,9 +25,9 @@ f.close()
 f=open('result/index.txt','w')
 f.write(str(i+1))
 f.close()
-os.rename('result.csv','result/result_'+str(i)+'.csv')
+os.rename('result.txt','result/result_'+str(i)+'.txt')
 
-result = 'result.csv'
+result = 'result.txt'
 f = open(result, 'w')
 f.write(',,,GA,,,OR,,,\n,,,weight,value,time,weight,value,time')
 f.close()
@@ -40,7 +40,7 @@ size = open('kplib/size.txt').read().split()
 timelimit = 300
 
 
-for t in type[4:]:
+for t in type:
     o = open(result, 'a')
     o.write('\n'+str(t))
     o.close()
@@ -56,7 +56,7 @@ for t in type[4:]:
             test.write(a)
             o = open(result, 'a')
             o.write('\n,,'+str(x))
-            o.close()
+            o.close()   
             test.close()
             # Genetic algorithm
             timestart = time.time()
@@ -66,7 +66,7 @@ for t in type[4:]:
             except:
                 Exception
             timeend = time.time()
-            f = open('result.csv', 'a')
+            f = open('result.txt', 'a')
             f.write(','+str((timeend-timestart)*100//1/100))
             f.close()
             # OR tool]
@@ -77,6 +77,6 @@ for t in type[4:]:
             except:
                 Exception
             timeend = time.time()
-            f = open('result.csv', 'a')
+            f = open('result.txt', 'a')
             f.write(','+str((timeend-timestart)*100//1/100))
             f.close()
